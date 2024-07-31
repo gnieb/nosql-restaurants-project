@@ -19,7 +19,21 @@ app.use(express.json())
 
 // get all the restaurant data
 
-app.get('/burgers')
+app.get('/burgers', (req, resp) => {
+    const url = process.env.ENDPOINT
+    const options = {
+        method: "GET",
+        headers: {
+            Accept: 'application/json',
+            'X-Cassandra-Token' : process.env.ASTRA_TOKEN
+        }
+    }
+    fetch(url, options)
+    .then(resp => resp.json())
+    .then(json => resp.json(json))
+    .catch(err => console.log("errors: ",err))
+
+})
 
 
 app.listen(PORT, () => console.log(`server is running off PORT ${PORT}`))

@@ -70,7 +70,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-NOTE- when running npm start, getting a weird error:
+### NOTE- when running npm start, getting a weird error:
 Cannot find module 'ajv/dist/compile/codegen
 
 resolved: npm install ajv --save-dev
