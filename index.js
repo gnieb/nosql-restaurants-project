@@ -17,6 +17,13 @@ app.use(morgan('tiny'))
 app.use(cors())
 app.use(express.json())
 
+// get all the restaurant data
+
+app.get('/burgers')
+
+
+app.listen(PORT, () => console.log(`server is running off PORT ${PORT}`))
+
 
 
 
