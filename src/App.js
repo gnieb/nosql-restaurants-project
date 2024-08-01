@@ -32,7 +32,7 @@ function App() {
   console.log(restaurants)
   return (
     <div className="App">
-      HELLO
+      <div className="text-orange-800 font-black text-3xl">RESTAURANT DIARIES</div>
 
       <div>
         {displayrestaurants}
