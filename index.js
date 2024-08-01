@@ -19,7 +19,7 @@ app.use(express.json())
 
 // get all the restaurant data
 
-app.get('/burgers', (req, resp) => {
+app.get('/restaurants', (req, resp) => {
     const url = process.env.ENDPOINT
     const options = {
         method: "GET",
@@ -34,6 +34,16 @@ app.get('/burgers', (req, resp) => {
     .catch(err => console.log("errors: ",err))
 
 })
+
+function errorHandler(error, req, resp,) {
+    resp.status(resp.statusCode || 500) 
+    resp.json({
+        message: error.message
+    })
+}
+
+
+app.use(errorHandler)
 
 
 app.listen(PORT, () => console.log(`server is running off PORT ${PORT}`))
